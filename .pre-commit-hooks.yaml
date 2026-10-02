@@ -1,0 +1,6 @@
+- id: pymend
+  name: pymend
+  description: Offline Python bug finder and safe auto-fixer
+  entry: pymend --check
+  language: python
+  types: [python]

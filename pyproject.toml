@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymend"
+version = "1.0.0"
+description = "Offline Python bug finder and safe auto-fixer (standard library only)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Guruprasad V M" }]
+keywords = ["linter", "static-analysis", "ast", "autofix", "code-quality"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Quality Assurance",
+    "Environment :: Console",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "build>=1"]
+
+[project.scripts]
+pymend = "pymend.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/YOUR-USERNAME/pymend"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
